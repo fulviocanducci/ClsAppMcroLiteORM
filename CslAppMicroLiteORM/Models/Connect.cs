@@ -53,6 +53,13 @@ namespace CslAppMicroLiteORM.Models
                 Session.Dispose();
                 Session = null;
             }
+
+            if (SessionAsync != null)
+            {
+                SessionAsync.Dispose();
+                SessionAsync = null;
+            }
+
             if (SessionFactory != null)
             {
                 SessionFactory = null;
