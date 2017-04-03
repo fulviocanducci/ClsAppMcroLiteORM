@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CslAppMicroLiteORM", "CslAppMicroLiteORM\CslAppMicroLiteORM.csproj", "{C3AB8B86-393A-4868-BF46-B80FF72E74CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppMicroLiteORM", "WebAppMicroLiteORM\WebAppMicroLiteORM.csproj", "{DC5181E5-5A32-4745-82C2-044A5F9EC547}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C3AB8B86-393A-4868-BF46-B80FF72E74CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3AB8B86-393A-4868-BF46-B80FF72E74CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3AB8B86-393A-4868-BF46-B80FF72E74CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5181E5-5A32-4745-82C2-044A5F9EC547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5181E5-5A32-4745-82C2-044A5F9EC547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5181E5-5A32-4745-82C2-044A5F9EC547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5181E5-5A32-4745-82C2-044A5F9EC547}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
