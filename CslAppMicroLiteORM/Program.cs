@@ -24,7 +24,7 @@ namespace CslAppMicroLiteORM
                     .CreateSessionFactory();
 
             ISession Session = SessionFactory.OpenSession();
-
+                       
             PagedResult<People> pagedPeople = Session.Paged<People>(
                 new SqlQuery("SELECT * FROM People ORDER BY Name ASC"), PagingOptions.ForPage(1, 3));
         }

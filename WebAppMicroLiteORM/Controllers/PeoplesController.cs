@@ -3,7 +3,6 @@ using MicroLite.Builder;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using WebAppMicroLiteORM.Models;
-
 namespace WebAppMicroLiteORM.Controllers
 {
     public class PeoplesController : Controller
@@ -13,7 +12,8 @@ namespace WebAppMicroLiteORM.Controllers
         {
             RepositoryPeople = repositoryPeople;
         }
-        
+
+        [HttpGet]
         public async Task<ActionResult> Index(int? page)
         {
             int total = 5;
@@ -24,12 +24,14 @@ namespace WebAppMicroLiteORM.Controllers
                 .ToSqlQuery();
             return View(await RepositoryPeople.PageAsync(query, page ?? 1, total));
         }
-        
+
+        [HttpGet]
         public async Task<ActionResult> Details(int id)
         {
             return View(await RepositoryPeople.FindAsync(id));
         }
         
+        [HttpGet]
         public ActionResult Create()
         {
             return View();
@@ -52,7 +54,8 @@ namespace WebAppMicroLiteORM.Controllers
                 return View();
             }
         }
-        
+
+        [HttpGet]
         public async Task<ActionResult> Edit(int id)
         {
             return View(await RepositoryPeople.FindAsync(id));
@@ -71,14 +74,15 @@ namespace WebAppMicroLiteORM.Controllers
                 return View();
             }
         }
-        
+
+        [HttpGet]
         public async Task<ActionResult> Delete(int id)
         {
             return View(await RepositoryPeople.FindAsync(id));
         }
        
         [HttpPost]
-        public async Task<ActionResult> Delete(int id, FormCollection collection)
+        public async Task<ActionResult> Delete(int id, People people)
         {
             try
             {
